@@ -5,12 +5,17 @@ public class randomf
     {
         Random r = new Random();
     //    String[][] alphabe;
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        char c = (char)(r.nextInt(26) + 'a');
         int row,col;
+        row=4;
+        col=6;
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWX";
+        char[][] mytable;
+        mytable = new char[row][col];
+
+        char c = (char)(r.nextInt(26) + 'a');
+
         // alphabe = new String[row][col];
-        row = 4;
-        col = 6;
+
     //    for (row=0 ; row<4 ; row++)
 //        {
 //            System.out.println(alphabet[][].charAt(r.nextInt(alphabet[][].length())));
@@ -18,9 +23,26 @@ public class randomf
 //            {
 //                System.out.println(alphabet[][].charAt(r.nextInt(alphabet[][].length())));
 
-         for (int i=0 ; i<26 ; i++)
+         for (int i=0 ; i<row ; i++)
          {
-             System.out.println(alphabet.charAt(r.nextInt(alphabet.length())));
+             for (int j=0 ; j<col ; j++)
+             {
+                mytable[i][j] =  alphabet.charAt(r.nextInt(alphabet.length()));
+
+            //    System.out.println(alphabet.charAt(r.nextInt(alphabet.length())));
+              }
+         }
+
+
+         for (int i=0 ; i<row ; i++)
+         {
+             for (int j=0 ; j<col ; j++)
+             {
+
+
+                System.out.print(mytable[i][j] );
+              }
+             System.out.println();
          }
 
 
